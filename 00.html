@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--Создайте страницу-калькулятор.
+Разместите на странице два поля ввода и кнопки для арифметических операций над данными
+введенными в поля ввода. Реализуйте данную страницу двумя способами – с использованием модели
+DOM Level 0 (через свойства) и DOM Level 2.
+!!1й способ!!-->
+<p><b>1 число:</b><br>
+    <input class="num" type="text" size="40">
+<p><b>2 число:</b><br>
+    <input class="num" type="text" size="40">
+</p>
+<p><input type="button" value="+" onclick="plus()">
+<p><input type="button" value="-" onclick="minus()">
+<p><input type="button" value="/" onclick="division()">
+<p><input type="button" value="*" onclick="multi()">
+<p id="message"></p>
+<script src="00.js"></script>
+</body>
+</html>
