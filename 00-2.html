@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--Создайте страницу-калькулятор.
+Разместите на странице два поля ввода и кнопки для арифметических операций над данными
+введенными в поля ввода. Реализуйте данную страницу двумя способами – с использованием модели
+DOM Level 0 (через свойства) и DOM Level 2.
+Задание 1
+Переделайте сценарий предыдущего примера таким образом, чтобы в поля вводов можно было вводить
+только целочисленные значения. Используйте для этого модель обработки событий DOM Level 2.
+!!2й способ + задание 1!!-->
+<div id="guard">
+<p><b>1 число:</b><br>
+    <input class="num" type="text" size="40">
+<p><b>2 число:</b><br>
+    <input class="num" type="text" size="40">
+</p></div>
+<p><input id="plus" type="button" value='+'>
+<p><input id="minus" type="button" value="-">
+<p><input id="divis" type="button" value="/">
+<p><input id="multi" type="button" value="*">
+<p id="message"></p>
+<script src="00-2.js"></script>
+</body>
+</html>
