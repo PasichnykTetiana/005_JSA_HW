@@ -1,40 +1,33 @@
-let plus = document.getElementById("plus"),
-    minus = document.getElementById("minus"),
-    divis = document.getElementById("divis"),
-    multi = document.getElementById("multi"),
-    message = document.getElementById("message"),
-    guard = document.getElementById("guard"),
-    num = document.getElementsByClassName("num");
+let num = document.getElementsByClassName("num"),
+btns = document.querySelectorAll('.show');
 
+function myCustomEvent(elems, event, f){
+    for(let i = 0; i < elems.length; i++){
+        elems[i].addEventListener(event, f[i])
+    }
+}
 
-{
-    plus.addEventListener("click",
-        function () {
-            let res = Number(num[0].value) + Number(num[1].value);
-            message.innerHTML = res;
-        });
-}
-{
-    minus.addEventListener("click",
-        function () {
-            let res = Number(num[0].value) - Number(num[1].value);
-            message.innerHTML = res;
-        });
-}
-{
-    divis.addEventListener("click",
-        function () {
-            let res = Number(num[0].value) / Number(num[1].value);
-            message.innerHTML = res;
-        });
-}
-{
-    multi.addEventListener("click",
-        function () {
-            let res = Number(num[0].value) * Number(num[1].value);
-            message.innerHTML = res;
-        });
-}
+let calc = [
+    function () {
+        let res = Number(num[0].value) + Number(num[1].value);
+        message.innerHTML = res;
+    },
+    function () {
+        let res = Number(num[0].value) - Number(num[1].value);
+        message.innerHTML = res;
+    },
+    function () {
+        let res = Number(num[0].value) / Number(num[1].value);
+        message.innerHTML = res;
+    },
+    function () {
+        let res = Number(num[0].value) * Number(num[1].value);
+        message.innerHTML = res;
+    }
+]
+
+myCustomEvent(btns, 'click', calc);
+
 guard.addEventListener("keypress", function (e) {
     console.log(!String.fromCharCode(e.charCode).match(/^[0-9]$/))
     if (!String.fromCharCode(e.charCode).match(/^\d+$/)){
